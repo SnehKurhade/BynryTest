@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name/Author</th>
+        <th scope="col">Post</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of postsData">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.author}}</td>
+        <td>{{item.title}}</td>
+        <td><button (click)="delete(item.id)">Delete</button>&nbsp;<button routerLink="/edit/{{item.id}}">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>

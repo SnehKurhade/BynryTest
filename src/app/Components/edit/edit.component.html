@@ -1,0 +1,24 @@
+<div class="Container m-3">
+<h3>Edit Post</h3>
+<br/>
+<div *ngIf="isSuccess == true" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Holy Success!</strong> Post Updated.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="closeAlert()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <br/>
+<form [formGroup]="editPost" (ngSubmit)="EditData()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name of the Author</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" formControlName="author" aria-describedby="emailHelp" placeholder="Enter the Name of the Author">
+    </div>
+    <br/>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Title of the Post</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" formControlName="title" aria-describedby="emailHelp" placeholder="Enter the Title of the Post">
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
